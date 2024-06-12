@@ -27,7 +27,7 @@ folders = [
     './path/to/your/folders/'
 ]
 
-print('='*10, " RANDOM FRAME BOT V1 ", '='*10)
+print('='*10, " RANDOM IMAGE BOT V1 ", '='*10)
 
 def check_recent_tweet(last_tweet_time_str):
     if not last_tweet_time_str:

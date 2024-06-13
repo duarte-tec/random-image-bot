@@ -1,4 +1,4 @@
-# Bot de Imagens Aleatórias
+# Random Image Bot
 
 Este script em Python automatiza a postagem de imagens aleatórias no Twitter usando a biblioteca Tweepy. O bot seleciona uma imagem aleatória de uma pasta especificada, verifica se um tweet foi feito recentemente e publica a imagem junto com o nome do arquivo como texto.
 
@@ -38,7 +38,7 @@ As seguintes bibliotecas Python são necessárias:
 
 - `tweepy`: Para interação com a API do Twitter.
 - `os`: Para operações com arquivos e diretórios.
-- `random`: Para seleção aleatória de arquivos.
+- `random`: Para seleção aleatória de arquivos e pastas.
 - `time`: Para operações relacionadas ao tempo.
 - `datetime`: Para trabalhar com datas e horas.
 
@@ -54,7 +54,7 @@ pip install tweepy
 
 2. **Instalar Dependências:** Instale as dependências necessárias conforme mencionado acima.
 
-3. **Configurar Chaves da API do Twitter:** Substitua os valores fictícios no script pelas suas chaves reais da API do Twitter.
+3. **Configurar Chaves da API do Twitter:** Substitua os campos vazios no script pelas suas chaves reais da API do Twitter.
 
 4. **Configurar Pastas:** Defina os caminhos das pastas onde suas imagens estão armazenadas. Atualize a lista `folders` com os caminhos apropriados:
 

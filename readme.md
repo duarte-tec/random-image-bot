@@ -1,20 +1,20 @@
 # Random Image Bot
 
-Este script em Python automatiza a postagem de imagens aleatórias no Twitter usando a biblioteca Tweepy. O bot seleciona uma imagem aleatória de uma pasta especificada, verifica se um tweet foi feito recentemente e publica a imagem junto com o nome do arquivo como texto.
+This Python script automates posting random images to Twitter using the Tweepy library. The bot selects a random image from a specified folder, checks if a tweet has been made recently, and posts the image along with the file name as text.
 
-## Índice
+## Table of Contents
 
-- [Configuração](#configuração)
-- [Funcionalidades](#funcionalidades)
-- [Dependências](#dependências)
-- [Uso](#uso)
-- [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Configuration](#configuration)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [File Structure](#file-structure)
 
 ---
 
-## Configuração <a name="configuração"></a>
+## Configuration <a name="configuration"></a>
 
-Antes de executar o bot, certifique-se de configurar suas chaves de API do Twitter no script:
+Before running the bot, make sure to configure your Twitter API keys in the script:
 
 ```python
 bearer_token = ''
@@ -24,39 +24,39 @@ access_token = ''
 access_token_secret = ''
 ```
 
-Substitua as strings vazias pelos seus valores reais das chaves de API do Twitter.
+Replace the empty strings with your actual Twitter API key values.
 
-## Funcionalidades <a name="funcionalidades"></a>
+## Features <a name="features"></a>
 
-- **Seleção Aleatória:** Seleciona aleatoriamente um arquivo de imagem de uma pasta especificada.
-- **Temporização de Tweets:** Garante que os tweets sejam espaçados para cumprir os limites de taxa da API do Twitter.
-- **Rastreamento de Estado:** Mantém o controle do horário do último tweet para evitar postagens rápidas.
+- **Random Selection:** Randomly selects an image file from a specified folder.
+- **Tweet Timing:** Ensures tweets are spaced out to comply with Twitter API rate limits.
+- **State Tracking:** Keeps track of the timestamp of the last tweet to avoid rapid postings.
 
-## Dependências <a name="dependências"></a>
+## Dependencies <a name="dependencies"></a>
 
-As seguintes bibliotecas Python são necessárias:
+The following Python libraries are required:
 
-- `tweepy`: Para interação com a API do Twitter.
-- `os`: Para operações com arquivos e diretórios.
-- `random`: Para seleção aleatória de arquivos e pastas.
-- `time`: Para operações relacionadas ao tempo.
-- `datetime`: Para trabalhar com datas e horas.
+- `tweepy`: For interacting with the Twitter API.
+- `os`: For file and directory operations.
+- `random`: For random selection of files and folders.
+- `time`: For time-related operations.
+- `datetime`: For working with dates and times.
 
-Certifique-se de que essas bibliotecas estejam instaladas usando o pip:
+Make sure these libraries are installed using pip:
 
 ```bash
 pip install tweepy
 ```
 
-## Uso <a name="uso"></a>
+## Usage <a name="usage"></a>
 
-1. **Clonar o Repositório:** Clone o repositório ou faça o download do script Python.
+1. **Clone the Repository:** Clone the repository or download the Python script.
 
-2. **Instalar Dependências:** Instale as dependências necessárias conforme mencionado acima.
+2. **Install Dependencies:** Install the necessary dependencies as mentioned above.
 
-3. **Configurar Chaves da API do Twitter:** Substitua os campos vazios no script pelas suas chaves reais da API do Twitter.
+3. **Configure Twitter API Keys:** Replace the empty fields in the script with your actual Twitter API keys.
 
-4. **Configurar Pastas:** Defina os caminhos das pastas onde suas imagens estão armazenadas. Atualize a lista `folders` com os caminhos apropriados:
+4. **Set Up Folders:** Define the paths to the folders where your images are stored. Update the `folders` list with appropriate paths:
 
    ```python
    folders = [
@@ -64,15 +64,15 @@ pip install tweepy
    ]
    ```
 
-5. **Executar o Script:** Execute o script Python:
+5. **Run the Script:** Execute the Python script:
 
    ```bash
    python main.py
    ```
 
-6. **Execução Contínua:** O script é executado continuamente e posta um tweet aproximadamente a cada hora, dependendo dos intervalos de espera configurados.
+6. **Continuous Execution:** The script runs continuously and posts a tweet approximately once an hour, depending on the configured wait intervals.
 
-## Estrutura de Arquivos <a name="estrutura-de-arquivos"></a>
+## File Structure <a name="file-structure"></a>
 
-- `main.py`: O script principal em Python.
-- `savestate.txt`: Um arquivo de texto usado para armazenar o timestamp do último tweet para evitar postagens rápidas.
+- `main.py`: The main Python script.
+- `savestate.txt`: A text file used to store the timestamp of the last tweet to prevent rapid postings.
